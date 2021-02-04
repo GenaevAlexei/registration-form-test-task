@@ -1,0 +1,539 @@
+@import "variables";
+
+.reg-hidden{
+  display: none;
+}
+
+.reg-wrapper{
+  position: absolute;
+  // top: 48px;
+  top: 0;
+  left: 0;
+
+  // width: 344px;
+  // width: 375px;
+  width: 100%;
+  // min-height: 1256px;
+  min-height: 1352px;
+  padding: 0;
+
+  // border-radius: 16px;
+  box-sizing: border-box;
+  // transform: translate(-50%, 0);
+  overflow: hidden;
+
+  @media(min-width: 1360px){
+    min-height: 1640px;
+  }
+}
+
+.reg-form-wrapper{
+  position: absolute;
+  top: 48px;
+  left: 50%;
+
+  width: 344px;
+  min-height: 1256px;
+  padding: 24px;
+
+  display: flex;
+
+  background-color: @formbackgrnd;
+  border-radius: 16px;
+  box-sizing: border-box;
+  transform: translate(-50%, 0);
+
+  @media(min-width: 1360px){
+    top: 80px;
+
+    width: 720px;
+    min-height: 1480px;
+    padding: 80px;
+    padding-top: 0;
+  }
+}
+
+.reg-header{
+  display: flex;
+  justify-content: space-between;
+
+  align-items: flex-start;
+}
+
+.reg-cross-wrapper{
+  position: relative;
+
+  margin-right: 3px;
+
+  cursor: pointer;
+
+  &:hover{
+    filter: brightness(150%);
+  }
+
+  @media(min-width: 1360px){
+    margin-left: 273px;
+    margin-top: 39px;
+  }
+}
+
+#backslash{
+  position: absolute;
+  left: 0;
+
+  transform: rotate(90deg);
+}
+
+.reg-cross-wrapper--thanks{
+  position: absolute;
+  top: 23px;
+  right: 19px;
+
+  @media(min-width: 1360px){
+    top: 0;
+    right: 36px;
+  }
+}
+
+.reg-title{
+  margin: 0;
+  margin-top: 16px;
+  margin-bottom: 34px;
+
+  font-family: MabPro, Arial, sans-serif;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.04em;
+  color: @white;
+
+  @media(min-width: 1360px){
+    margin-top: 66px;
+    margin-left: 2px;
+
+    font-size: 45px;
+    line-height: 56px;
+    letter-spacing: 0.07em;
+  }
+}
+
+// тумблер онлайн-офлайн:
+.reg-online{
+  padding-top: 24px;
+  padding-left: 0;
+
+  display: flex;
+  justify-content: flex-start;
+
+  font-family: MabPro, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: @underline;
+
+  border: none;
+
+  @media(min-width: 1360px){
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.reg-label-on{
+  position: absolute;
+  left: -59px;
+  top: 3px;
+
+  cursor: pointer;
+
+  &::before{
+    content: "";
+
+    position: absolute;
+    left: 62px;
+    top: 0px;
+    z-index: 1;
+
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    // background-color: @formbackgrnd;
+    background-color: transparent;
+    border-radius: 50%;
+    // border: 1px solid @buttonhover;
+    box-sizing: border-box;
+
+    @media(min-width: 1360px){
+      top: 6px;
+      left: 77px;
+    }
+  }
+
+  @media(min-width: 1360px){
+    top: -3px;
+    left: -74px;
+  }
+}
+
+.reg-label-off{
+  // margin-top: 4px;
+  // margin-left: 17px;
+
+  position: absolute;
+  left: 56px;
+  top: 3px;
+
+  cursor: pointer;
+
+  &::after{
+    content: "";
+
+    position: absolute;
+    left: -38px;
+    top: 0px;
+
+    display: block;
+    width: 17px;
+    height: 16px;
+
+    // background-color: @formbackgrnd;
+    background-color: transparent;
+    border-radius: 50%;
+    // border: 1px solid @buttonhover;
+    box-sizing: border-box;
+
+    @media(min-width: 1360px){
+      top: 6px;
+      // left: 77px;
+    }
+  }
+
+  @media(min-width: 1360px){
+    top: -3px;
+    left: 55px;
+  }
+}
+
+.reg-tumbler{
+  width: 40px;
+  height: 24px;
+  margin-left: 56px;
+  padding-bottom: 4px;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  border: 1px solid @buttonhover;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: @formbackgrnd;
+
+  @media(min-width: 1360px){
+    margin-left: 70px;
+    margin-top: 9px;
+  }
+}
+
+.reg-on{
+  // margin-right: 3px;
+  // margin-left: 5px;
+  position: absolute;
+  z-index: -1;
+}
+
+.reg-off{
+  // margin-right: 0;
+  // margin-left: 0;
+
+  position: absolute;
+  left: 15px;
+  z-index: -1;
+}
+
+.reg-on:hover~ .reg-label-on{
+  color: #FF7777;
+}
+
+.reg-off:hover~ .reg-label-off{
+  color: #FF7777;
+}
+
+.reg-on:focus~ .reg-label-on{
+  color: #FF7777;
+}
+
+.reg-off:focus~ .reg-label-off{
+  color: #FF7777;
+}
+
+.reg-on:checked~ .reg-label-on{
+  color: @white;
+
+  &::before{
+    background-color: @buttonhover;
+    box-shadow: 0px 2px 10px #FF7777;
+  }
+}
+
+.reg-off:checked~ .reg-label-off{
+  color: @white;
+
+  &::after{
+    background-color: @buttonhover;
+    box-shadow: 0px 2px 10px #FF7777;
+  }
+}
+
+// Ползунок цены:
+.reg-cost{
+  position: relative;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  box-sizing: border-box;
+}
+
+.reg-cost-legend{
+  position: relative;
+  top: 28px;
+  left: -2px;
+
+  font-family: MabLight, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  color: @underline;
+
+  @media(min-width: 1360px){
+    top: 33px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.reg-money{
+  margin-top: 39px;
+  margin-bottom: 0;
+
+  font-family: MabLight, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: @white;
+
+  @media(min-width: 1360px){
+    margin-top: 42px;
+
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.reg-range{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  width: 296px;
+  background-color: @formbackgrnd;
+  cursor: pointer;
+
+  &:focus{
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb{
+    -webkit-appearance: none;
+
+    width: 23px;
+    height: 23px;
+    margin-top: -11px;
+
+    border: none;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: @buttonhover ;
+    box-shadow: 0px 2px 10px @buttonhover;
+  }
+
+  &::-webkit-slider-runnable-track{
+    -webkit-appearance: none;
+
+    height: 1px;
+
+    background-color: #666699;
+  }
+
+// for Mozilla:
+  &::-moz-range-thumb{
+    width: 23px;
+    height: 23px;
+    margin-top: -11px;
+
+    border: none;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: @buttonhover ;
+    box-shadow: 0px 2px 10px @buttonhover;
+  }
+
+  &::-moz-range-track {
+    background-color: #666699;
+  }
+
+  @media(min-width: 1360px){
+    width: 560px;
+  }
+}
+
+.reg-range-wrapper{
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  height: 24px;
+
+  @media(min-width: 1360px){
+    margin-top: 4px;
+    left: -2px;
+  }
+}
+
+.reg-progress{
+  position: absolute;
+  // top: 16px;
+  left: 2px;
+
+  height: 3px;
+  width: 0;
+
+  background-color: @buttonhover;
+  box-shadow: 0px 2px 10px @buttonhover;
+  border-radius: 2px;
+}
+
+// кнопка "Отправить"
+.reg-button{
+  width: 160px;
+  height: 54px;
+  padding-bottom: 8px;
+
+  font-family: MabPro, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 22.4px;
+  font-weight: 400;
+
+  background-color: @white;
+  opacity: 0.3;
+  border-radius: 8px;
+  border-width: 0px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover{
+    color: @white;
+
+    background-color: @buttonhover;
+    opacity: 1;
+    box-shadow: 0px 10px 30px rgba(255, 119, 119, 0.4);
+  }
+
+  &:focus{
+    color: @white;
+
+    background-color: @buttonhover;
+    opacity: 1;
+    box-shadow: 0px 10px 30px rgba(255, 119, 119, 0.4);
+    outline: none;
+  }
+
+  &:active{
+    color: @white;
+
+    background-color: @buttonpress;
+    opacity: 1;
+    box-shadow: 0px 10px 30px rgba(255, 119, 119, 0.4);
+  }
+}
+
+.reg-button--submit{
+  width: 160px;
+  height: 54px;
+  margin-top: 60px;
+
+  @media(min-width: 1360px){
+    width: 200px;
+    height: 58px;
+    margin-top: 53px;
+
+    font-size: 18px;
+  }
+}
+
+.reg-button--thanks{
+  width: 173px;
+
+  color: @white;
+
+  background-color: @buttonhover;
+  opacity: 1;
+  box-shadow: 0px 10px 30px rgba(255, 119, 119, 0.4);
+
+  @media(min-width: 1360px){
+    width: 215px;
+    height: 58px;
+    margin-left: 55px;
+    padding-bottom: 5px;
+
+    font-size: 18px;
+
+    box-sizing: border-box;
+  }
+}
+
+// Согласие с политикой конфиденциальности:
+
+.reg-note{
+  margin-top: 27px;
+
+  font-family: MabLight, Arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media(min-width: 1360px){
+    width: 336px;
+    margin-left: 29px;
+    margin-top: 40px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.reg-note-text span{
+  color: @white;
+  opacity: 0.3;
+}
+
+.reg-note-link{
+  color: @white;
+  opacity: 0.3;
+  text-decoration: none;
+
+  border-bottom: 1px solid @white;
+  cursor: pointer;
+
+  &:hover{
+    opacity: 1.0;
+  }
+}
+
+.reg-footer{
+  @media(min-width: 1360px){
+    display: flex;
+  }
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="reg-wrapper">
+      <div class="blue-light"></div>
+      <div class="purple-light"></div>
+      <div class="blue-light-bottom"></div>
+      <div class="reg-form-wrapper">
+        <form class="reg-form" action="" method="">
+          <div class="reg-header">
+            <h3 class="reg-title">Регистрация</h3>
+            <div class="reg-cross-wrapper reg-cross-wrapper--form">
+              <svg id="slash" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                  viewBox="0 0 30 30" fill="none">
+              <path d="M1.00024 1L29 29" stroke="#9E9DAC" stroke-width="2"/>
+              </svg>
+              <svg id="backslash" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                  viewBox="0 0 30 30" fill="none">
+              <path d="M1.00024 1L29 29" stroke="#9E9DAC" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+          <fieldset class="contacts">
+            <ul>
+              <li class="contacts-item-container">
+                <div class="select-input-wrapper">
+                  <label for="cities" class="select-label">Город</label>
+                  <label for="cities" class="select-arrow"></label>
+                  <input class="select-custom-input"
+                         id="cities"
+                         type="text"
+                         name="city" value=""
+                         autocomplete="off"
+                         readonly
+                         tabindex="-1"
+                         required
+                         >
+                </div>
+                <div class="select-cities-options
+                            select-cities-options--close">
+                  <ul class="select-cities-list" tabindex="0">
+                    <li class="select-city-item" id="0" role="treeitem" tabindex="-1"></li>
+                    <li class="select-city-item" id="1" role="treeitem" tabindex="-1">Москва</li>
+                    <li class="select-city-item" id="2" role="treeitem" tabindex="-1">Санкт-Петербург</li>
+                    <li class="select-city-item" id="3" role="treeitem" tabindex="-1">Екатеринбург</li>
+                    <li class="select-city-item" id="4" role="treeitem" tabindex="-1">Самара</li>
+                    <li class="select-city-item" id="5" role="treeitem" tabindex="-1">Иркутск</li>
+                    <li class="select-city-item" id="6" role="treeitem" tabindex="-1">Челябинск</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="contacts-item-container">
+                <label class="contacts-label" for="name-surname">Имя Фамилия</label>
+                <input type="text"
+                       class="contacts-name contacts-item"
+                       name="name" id="name-surname"
+                       value=""
+                       autocomplete="off"
+                       required>
+              </li>
+              <li class="contacts-item-container">
+                <label class="contacts-label" for="phone">Телефон</label>
+                <input type="tel"
+                       class="contacts-phone contacts-item"
+                       name="phone" id="phone"
+                       value=""
+                       autocomplete="off"
+                       required
+                       maxlength="12">
+              </li>
+              <li class="contacts-item-container">
+                <label class="contacts-label contacts-label--comments"
+                       for="comment">
+                  Комментарий
+                </label>
+                <textarea id="comment"
+                          name="comment"
+                          class="contacts-comments"
+                          cols="8"
+                          value=""
+                          >
+                </textarea>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="masterclass masterclass-names">
+            <legend class="masterclass-legend">Мастер-класс</legend>
+            <ul class="masterclass-names-list">
+              <li class="masterclass-names-item">
+                <input id="eco"
+                       class="masterclass-names-input"
+                       type="radio"
+                       name="masterclass">
+                <label for="eco"
+                       class="masterclass-names-label" >
+                  Экономия на онлайн-шопинге
+                </label>
+              </li>
+              <li class="masterclass-names-item">
+                <input id="master"
+                       class="masterclass-names-input"
+                       type="radio"
+                       name="masterclass">
+                <label for="master"
+                      class="masterclass-names-label">
+                  Мастер-класс
+                </label>
+              </li>
+              <li class="masterclass-names-item">
+                <input id="places"
+                       class="masterclass-names-input"
+                       type="radio"
+                       name="masterclass">
+                <label for="places"
+                       class="masterclass-names-label">
+                  Лучшие площадки
+                </label>
+              </li>
+              <li class="masterclass-names-item">
+                <input id="master-two"
+                       class="masterclass-names-input"
+                       type="radio"
+                       name="masterclass">
+                <label for="master-two"
+                       class="masterclass-names-label">
+                  Мастер-класс
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="masterclass masterclass--time">
+            <legend class="masterclass-legend masterclass-legend--time">Время проведения</legend>
+            <ul class="masterclass-time-list">
+              <li class="masterclass-time-item">
+                <input  id="time-one"
+                        class="masterclass-time-input"
+                        type="radio"
+                        name="time">
+                <label  for="time-one"
+                        class="masterclass-time-numbers">
+                  <span class="masterclass-time-mark">
+                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 11 10' width='11' height='10'>
+                    <path stroke='white' stroke-linecap='round' stroke-width='2' d='M 1 4.03333 L 4.45 8 L 10 1'>
+                    </path>
+                    </svg>
+                  </span>
+                  12:00 &ndash; 14:00
+                </label>
+              </li>
+              <li class="masterclass-time-item">
+                <input id="time-two"
+                       class="masterclass-time-input"
+                       type="radio"
+                       name="time">
+                <label for="time-two"
+                       class="masterclass-time-numbers">
+                  <span class="masterclass-time-mark">
+                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 11 10' width='11' height='10'>
+                    <path stroke='white' stroke-linecap='round' stroke-width='2' d='M 1 4.03333 L 4.45 8 L 10 1'>
+                    </path>
+                    </svg>
+                  </span>
+                  15:00 &ndash; 17:00
+                </label>
+              </li>
+              <li class="masterclass-time-item">
+                <input  id="time-three"
+                        class="masterclass-time-input"
+                        type="radio"
+                        name="time">
+                <label  for="time-three"
+                        class="masterclass-time-numbers">
+                  <span class="masterclass-time-mark">
+                    <svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 11 10' width='11' height='10'>
+                    <path stroke='white' stroke-linecap='round' stroke-width='2' d='M 1 4.03333 L 4.45 8 L 10 1'>
+                    </path>
+                    </svg>
+                  </span>
+                  19:00 &ndash; 21:00
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="reg-online">
+            <div class="reg-tumbler">
+              <input id="on" class="reg-on" type="radio" name="net" value="on" checked>
+              <input id="off" class="reg-off" type="radio" name="net" value="off">
+              <label class="reg-label-on" for="on">Онлайн</label>
+              <label class="reg-label-off" for="off">Офлайн</label>
+            </div>
+          </fieldset>
+          <fieldset class="reg-cost">
+            <legend class="reg-cost-legend">Сколько вы готовы заплатить за мероприятие?</legend>
+            <p class="reg-money">
+              <span class="reg-howMuch">
+                0
+              </span>
+              &#8381;
+            </p>
+            <div class="reg-range-wrapper">
+              <input type="range"
+                     class="reg-range"
+                     min="0" max="10000" step="10" value="1000" >
+                <div class="reg-progress"></div>
+            </div>
+          </fieldset>
+          <div class="reg-footer">
+            <input class="reg-button reg-button--submit" type="submit" value="Отправить">
+            <div class="reg-note">
+              <p class="reg-note-text">
+                <span>Нажимая на кнопку, вы соглашаетесь</span>
+                с&nbsp;<a class="reg-note-link" href="#">Политикой обработки персональных данных</a>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="thanks thanks-hidden">
+      <div class="thanks-blue"></div>
+      <div class="thanks-purple"></div>
+      <div class="thanks-wrapper">
+        <div class="reg-cross-wrapper reg-cross-wrapper--thanks">
+          <svg id="slash" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+              viewBox="0 0 30 30" fill="none">
+          <path d="M1.00024 1L29 29" stroke="#9E9DAC" stroke-width="2"/>
+          </svg>
+          <svg id="backslash" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+              viewBox="0 0 30 30" fill="none">
+          <path d="M1.00024 1L29 29" stroke="#9E9DAC" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="thanks-title-wrapper">
+          <h4 class="thanks-title">Спасибо за заявку</h4>
+        </div>
+        <div class="thanks-text-wrapper">
+          <p class="thanks-text">
+            Мы свяжемся с вами в ближайшее время
+          </p>
+        </div>
+        <button class="reg-button reg-button--thanks"
+                type="button"
+                name="continue">
+                Продолжить
+        </button>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/select.js"></script>
+    <script type="text/javascript" src="js/popUpsToggle.js"></script>
+    </script>
+  </body>
+</html>

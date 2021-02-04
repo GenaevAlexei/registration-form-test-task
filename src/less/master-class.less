@@ -1,0 +1,205 @@
+@import "variables";
+
+.masterclass{
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  border: none;
+
+  font-family: MabLight, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  color: @underline;
+
+  @media(min-width: 1360px){
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.masterclass-names-label{
+    position: relative;
+    cursor: pointer;
+
+  &::before{
+    content: "";
+
+    position: absolute;
+    left: -40px;
+    top: -1px;
+
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    // background-color: @formbackgrnd;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid #FF7777;
+    box-sizing: border-box;
+
+    @media(min-width: 1360px){
+      top: 7px;
+    }
+  }
+
+  @media(min-width: 1360px){
+    left: -2px;
+  }
+}
+
+.masterclass-names-input{
+  margin-right: 18px;
+  opacity: 0;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.masterclass-names-input:focus~ .masterclass-names-label{
+  color: @white;
+}
+
+.masterclass-names-input:hover~ .masterclass-names-label{
+  color: @white;
+}
+
+.masterclass-names-input:checked~ .masterclass-names-label{
+  color: @white;
+
+  &::before{background-color: @white;
+  box-shadow: 0px 2px 10px #FF7777;
+
+  border-width: 10px;}
+}
+
+.masterclass-names-list{
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.masterclass-legend{
+  position: relative;
+  top: 2px;
+  left: -3px;
+
+  font-size: 12px;
+  line-height: 16px;
+
+  margin-bottom: 23px;
+
+  @media(min-width: 1360px){
+    top: 10px;
+    left: -2px;
+
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+.masterclass-names-item{
+  margin-bottom: 16px;
+
+  @media(min-width: 1360px){
+    margin-bottom: 16px;
+  }
+}
+
+// Время проведения:
+
+.masterclass--time{
+  margin-top: 10px;
+}
+
+.masterclass-legend--time{
+  margin-bottom: 22px;
+
+  @media(min-width: 1360px){
+    margin-bottom: 30px;
+  }
+}
+
+.masterclass-time-numbers{
+  position: relative;
+  cursor: pointer;
+
+  &::before{
+    content: "";
+
+    position: absolute;
+    left: -40px;
+    top: -1px;
+
+    display: block;
+    width: 24px;
+    height: 24px;
+
+    background-color: @formbackgrnd;
+    border-radius: 4px;
+    border: 1px solid #FF7777;
+    box-sizing: border-box;
+
+    @media(min-width: 1360px){
+      top: 7px;
+    }
+  }
+
+  @media(min-width: 1360px){
+    left: -2px;
+  }
+}
+
+.masterclass-time-input{
+  margin-right: 19px;
+  opacity: 0;
+}
+
+.masterclass-time-mark{
+  position: absolute;
+  left: -33px;
+  top: -2px;
+
+  visibility: hidden;
+}
+
+.masterclass-time-input:focus~ .masterclass-time-numbers{
+  color: @white;
+}
+
+.masterclass-time-input:hover~ .masterclass-time-numbers{
+  color: @white;
+}
+
+.masterclass-time-input:checked~ .masterclass-time-numbers{
+  color: @white;
+
+  &::before{
+    content: '';
+
+    background-color: #FF7777;
+    box-shadow: 0px 2px 10px #FF7777;
+  }
+
+  .masterclass-time-mark{
+    visibility: visible;
+  }
+}
+
+.masterclass-time-list{
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.masterclass-time-item{
+  margin-bottom: 16px;
+}
